@@ -1,7 +1,7 @@
 /*
   Description: file responsible for 'product' model handling
-  Author: Vitor Veras
-  Creation date:  02/12/2017
+  Author: Akash vishwakarma
+  Creation date:  23/07/2019
 */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
