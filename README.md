@@ -1,5 +1,5 @@
-# Node-CRUD restful
-A simple restful NodeJS CRUD, with expressJS and mongoDB.
+# Feedback Application
+A simple restful NodeJS Feedback Application, with React, Redux, expressJS and mongoDB.
 
 ## Resources
 
@@ -9,6 +9,8 @@ A simple restful NodeJS CRUD, with expressJS and mongoDB.
 - Mongoose
 - Postman
 - BodyParser
+- React
+- Redux 
 
 ## Routes
 
