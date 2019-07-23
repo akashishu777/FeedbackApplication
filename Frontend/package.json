@@ -4,7 +4,7 @@
   "description": "simplest redux + react example",
   "main": "index.js",
   "scripts": {
-    "start": "browserify --debug --extension=js -o bundle.js index.js && http-server -p 8082 --open"
+    "start": "browserify --debug --extension=js -o bundle.js index.js && http-server -p 8085 --open"
   },
   "repository": {
     "type": "git",
