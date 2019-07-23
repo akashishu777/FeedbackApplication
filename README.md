@@ -12,20 +12,10 @@ A simple restful NodeJS Feedback Application, with React, Redux, expressJS and m
 - React
 - Redux 
 
-## Routes
-
-|          ROUTE            |       HTTP        |      DESCRIPTION      | 
-| ------------------------- | ----------------- | --------------------- | 
-| /api/                     |       GET         | Main page             | 
-| /api/products             |       GET         | Show all products     | 
-| /api/products/:product_id |       GET         | Show by id            | 
-| /api/products/:product_id |       PUT         | Update product by id  |    
-| /api/products/:product_id |       DELETE      | Delete product by id  |
-
 ## Running
 
 ```
-git clone https://github.com/vitor-veras/node-crud-rest.git
+git clone https://github.com/akashishu777/FeedbackApplication.git
 ```
  go to directory and run, this will install all dependencies for the project.
 ```
@@ -44,4 +34,4 @@ mongod
 
 ## Author
 
-* **Vitor Veras de Moura** - [GitHub](https://github.com/vitor-veras) - Email: vitorverasm@gmail.com
+* **Vitor Veras de Moura** - [GitHub](https://github.com/vitor-veras) - Email: akashishu777@hotmail.com
