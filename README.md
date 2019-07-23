@@ -34,4 +34,4 @@ mongod
 
 ## Author
 
-* **Vitor Veras de Moura** - [GitHub](https://github.com/vitor-veras) - Email: akashishu777@hotmail.com
+* **Akash Vishwakarma** - [GitHub](https://github.com/vitor-veras) - Email: akashishu777@hotmail.com
