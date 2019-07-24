@@ -9,4 +9,6 @@ ReactDOM.render(
     <App />
   </Provider>,
   document.getElementById('root')
-)
+);
+
+module.hot.accept();

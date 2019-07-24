@@ -62,7 +62,7 @@ class Counter extends Component {
                                 <button onClick={this.handleSubmit} value="false">No</button> 
                            </div>);
 
-    var show = shouldShow ? feedbackComp : (<h3>Thank you for your response!</h3>);
+    var show = shouldShow ? feedbackComp : (<h3>Thank you for your response :)</h3>);
     return (
       <div style={{marginLeft: '30%', marginTop: '20%'}}>
           {show}
