@@ -5,17 +5,10 @@
 */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-/*
-* Product
-*
-* Id: int
-* Name: String
-* Amount: int
-* Description: String
-* */
-var ProductSchema = new Schema({
+
+var VoteSchema = new Schema({
     ip: String,
     vote: Boolean
 });
-module.exports = mongoose.model('product', ProductSchema);
 
+module.exports = mongoose.model('vote', VoteSchema);

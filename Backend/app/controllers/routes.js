@@ -11,6 +11,14 @@ router.use(bodyParser.json());
      R O U T E S - S E T U P
    ---------------------------
 */
+function ipExists(key, array) {
+    for (var el in array) {
+      if (array[el].ip === key) {
+        return false;
+      }
+    }
+    return true;
+}
 
 //setup middleware
 router.use(function (req, res, next) {
@@ -23,22 +31,35 @@ router.get('/', function (req, res) {
     res.sendFile('D:\\Car_animation\\index.html');
 });
 
+router.route('/test')
+    /* ---------------------------------------------------------------------
+         (2) READ ALL PRODUCTS - (GET) - http://localhost:3000/api/products
+       ---------------------------------------------------------------------*/
+    .get(function (req, res) {
+        console.log('\n\nRequest is Comming from: ' + req.connection.remoteAddress.slice(7));
+        Product.find(function (error, products) {
+            if (error) {
+                res.status(500).send("Failed to show products. ERROR: " + error);
+            }
+            res.json(ipExists(req.connection.remoteAddress.slice(7),products));
+        });
+    });
+
 /* ----------------------------
      IMPLEMENTED CRUD METHODS
    ----------------------------
 */
 /* [1st-ROUTE] - '/products' - used for (1)GET ALL & (2)POST METHOD */
-router.route('/products')
+router.route('/vote')
 /* --------------------------------------------------------------------
      (1) CREATE PRODUCT - (POST) - http://localhost:3000/api/products
    --------------------------------------------------------------------*/
     .post(function (req, res) {
         var products = new Product();//instance of Product()-(name,amount,description)
         //fill attributes with requested body
-        console.log(req.body);
-        products.name = req.body.name;
-        products.amount = req.body.amount;
-        products.description = req.body.description;
+        console.log('\nFeedback is Comming from: ' + req.connection.remoteAddress.slice(7));
+        products.ip = req.connection.remoteAddress.slice(7);
+        products.vote = req.body.vote;
         //response
         products.save(function (error) {
             if (error)
@@ -50,6 +71,7 @@ router.route('/products')
          (2) READ ALL PRODUCTS - (GET) - http://localhost:3000/api/products
        ---------------------------------------------------------------------*/
     .get(function (req, res) {
+        console.log(req.connection.remoteAddress.slice(7));
         Product.find(function (error, products) {
             if (error)
                 res.status(500).send("Failed to show products. ERROR: " + error);

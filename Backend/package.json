@@ -4,12 +4,12 @@
   "description": "A simple restful NodeJS crud, with expressJS and mongoDB",
   "main": "./app/server.js",
   "scripts": {
-    "dev": "nodemon",
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitor-veras/node-crud-rest.git"
+    "url": "git+https://github.com/akashishu777/FeedbackApplication.git"
   },
   "keywords": [
     "nodejs",
@@ -23,14 +23,15 @@
     "mongo",
     "mongodb"
   ],
-  "author": "Vitor Veras",
+  "author": "Akash vishwakarma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vitor-veras/node-crud-rest/issues"
+    "url": "https://github.com/akashishu777/FeedbackApplication.git"
   },
-  "homepage": "https://github.com/vitor-veras/node-crud-rest#readme",
+  "homepage": "https://github.com/akashishu777/FeedbackApplication.git#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
     "express": "^4.16.2",
     "mongoose": "^4.13.5",
     "nodemon": "^1.12.1",

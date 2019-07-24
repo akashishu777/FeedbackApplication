@@ -6,7 +6,11 @@
 
 //CALL PACKAGES
 var express = require('express');
+var cors = require('cors');
+
 var app = express();
+app.use(cors());
+
 var db = require('./models/db');
 var Router = require('./controllers/routes');
 //RUN SERVER ON PORT 3000
