@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prod": "webpack",
-    "start": "webpack -p --progress --color && webpack-dev-server --hot --inline"
+    "start": "webpack -p --progress --color && webpack-dev-server --hot --inline",
+    "server": "node ../backend/app/server.js"
   },
   "repository": {
     "type": "git",
