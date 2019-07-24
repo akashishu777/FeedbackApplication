@@ -22,7 +22,9 @@ function ipExists(key, array) {
 
 //setup middleware
 router.use(function (req, res, next) {
-    console.log("request");
+    console.log("\n\n===============================");
+    console.log("========== Request ============");
+    console.log("===============================");
     next();
 });
 
@@ -37,6 +39,7 @@ router.route('/test')
        ---------------------------------------------------------------------*/
     .get(function (req, res) {
         console.log('\n\nRequest is Comming from: ' + req.connection.remoteAddress.slice(7));
+        console.log("===============================\n\n");
         Product.find(function (error, products) {
             if (error) {
                 res.status(500).send("Failed to show products. ERROR: " + error);
@@ -58,6 +61,7 @@ router.route('/vote')
         var products = new Product();//instance of Product()-(name,amount,description)
         //fill attributes with requested body
         console.log('\nFeedback is Comming from: ' + req.connection.remoteAddress.slice(7));
+        console.log("===============================");
         products.ip = req.connection.remoteAddress.slice(7);
         products.vote = req.body.vote;
         //response
@@ -71,7 +75,8 @@ router.route('/vote')
          (2) READ ALL PRODUCTS - (GET) - http://localhost:3000/api/products
        ---------------------------------------------------------------------*/
     .get(function (req, res) {
-        console.log(req.connection.remoteAddress.slice(7));
+        console.log('IP  ' + req.connection.remoteAddress.slice(7));
+        console.log("===============================");
         Product.find(function (error, products) {
             if (error)
                 res.status(500).send("Failed to show products. ERROR: " + error);
