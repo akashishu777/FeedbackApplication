@@ -1,5 +1,5 @@
 {
-  "name": "simplest-redux-example",
+  "name": "feedback-application",
   "version": "0.0.0",
   "description": "simplest redux + react example",
   "main": "index.js",
@@ -16,7 +16,7 @@
     "redux",
     "react"
   ],
-  "author": "Jackie Li",
+  "author": "Akash vishwakarma",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akashishu777/FeedbackApplication.git"
