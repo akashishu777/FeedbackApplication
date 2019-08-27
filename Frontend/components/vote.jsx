@@ -68,8 +68,8 @@ class Counter extends Component {
                                   <div style={{justifyContent: 'center',
                                             alignItems: 'center',
                                             display: 'flex'}}>
-                                            <img style={{height: '50px', width: '50px', paddingRight: '20px'}} onClick={() => this.handleSubmit(true)} src={like}/>
-                                            <img style={{height: '53px', width: '60px'}} onClick={() => this.handleSubmit(false)} src={dislike}/>
+                                            <img style={{height: '70px', width: '70px', paddingRight: '50px'}} onClick={() => this.handleSubmit(true)} src={like}/>
+                                            <img style={{height: '71px', width: '77px'}} onClick={() => this.handleSubmit(false)} src={dislike}/>
                                 </div>
                            </div>);
 
