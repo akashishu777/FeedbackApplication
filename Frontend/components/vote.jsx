@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import like from '../assets/like.png';
 import dislike from '../assets/dislike.png';
+import jerry from '../assets/jerry.gif';
 
 // React component
 class Counter extends Component {
@@ -73,7 +74,12 @@ class Counter extends Component {
                                 </div>
                            </div>);
 
-    var show = shouldShow ? feedbackComp : (<h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Thank you for your response :)</h3>);
+    var show = shouldShow ? feedbackComp : (
+      <div>
+        <h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Thank you for your response :)</h3>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><img src={jerry}/></div>
+        </div>
+      );
     return (
           <div style={{height: '100%', /* Magic here */
                 display: 'flex',
