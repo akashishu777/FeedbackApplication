@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import * as actions from '../action/actions';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import like from '../assets/like.png';
-import dislike from '../assets/dislike.png';
-import jerry from '../assets/jerry.gif';
+import like from '../assets/up.png';
+import dislike from '../assets/down.png';
+// import jerry from '../assets/jerry.gif';
 
 // React component
 class Counter extends Component {
@@ -77,7 +77,6 @@ class Counter extends Component {
     var show = shouldShow ? feedbackComp : (
       <div>
         <h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Thank you for your response :)</h3>
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><img src={jerry}/></div>
         </div>
       );
     return (
@@ -98,6 +97,7 @@ Counter.propTypes = {
   onInputChange: PropTypes.func.isRequired,
 }
 
+// <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><img src={jerry}/></div>
 
 // Map Redux state to component props
 function mapStateToProps(state) {
