@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prod": "webpack",
-    "start": "webpack -p --progress --color && webpack-dev-server --hot --inline",
+    "start": "webpack -p --progress --color && webpack-dev-server --hot --inline --host 10.90.11.37",
     "server": "node ../backend/app/server.js"
   },
   "repository": {

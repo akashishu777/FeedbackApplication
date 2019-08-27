@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as actions from '../action/actions';
 import { connect } from 'react-redux';
 import axios from 'axios';
-
 // React component
 class Counter extends Component {
 	constructor(props) {
@@ -17,7 +16,7 @@ class Counter extends Component {
     }
 
     componentDidMount() {
-      axios.get('http://10.90.10.183:3000/api/test')
+      axios.get('http://10.90.11.37:3000/api/test')
         .then(response => {
             console.log(response.data);
             this.setState({ shouldShow: response.data});
@@ -31,7 +30,7 @@ class Counter extends Component {
       var self = this;
       axios({
         method: 'post',
-        url: 'http://10.90.10.183:3000/api/vote',
+        url: 'http://10.90.11.37:3000/api/vote',
         data: {vote: e.target.value},
         config: { headers: {'Content-Type': 'multipart/form-data' }}
         })
@@ -51,22 +50,60 @@ class Counter extends Component {
     onInputChange(e.target.value);
   }
 
-  render() {
-    
-    const { value, onIncreaseClick, onDecreaseClick, text } = this.props
+  render() {  
+    const centered = {
+        height: '100vh', /* Magic here */
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+    const { value, onIncreaseClick, onDecreaseClick, text } = this.props;
     const { shouldShow } = this.state;
-    const feedbackComp = ( <div style={{marginLeft: '30%', marginTop: '20%'}}>
-                                 <h3>Are you okay today?</h3>
+    const feedbackComp = ( <div style={{}}>
+                                 <h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Conditional settings allow you to define the appearance!</h3>
                                   <p>{shouldShow}</p>
-                                  <button onClick={this.handleSubmit} value="true">Yes</button> 
-                                <button onClick={this.handleSubmit} value="false">No</button> 
+                                  <div style={{justifyContent: 'center',
+                                            alignItems: 'center',
+                                            display: 'flex'}}>
+                                    <button style= {{marginRight: '5px',
+                                    display:'inline-block',
+                                     padding:'0.3em 1.2em',
+                                     margin:'0 2.0em 0.3em 0',
+                                     borderRadius:'2em',
+                                     boxSizing: 'border-box',
+                                     textDecoration:'none',
+                                     fontFamily:'Roboto',
+                                     fontWeight:'300',
+                                     color:'#FFFFFF',
+                                     backgroundColor:'#4eb5f1',
+                                     textAlign:'center',
+                                     transition: 'all 0.2s'
+                                  }}   onClick={this.handleSubmit} value="true">Yes</button> 
+                                      <button style= {{
+                                      display:'inline-block',
+                                       padding:'0.3em 1.2em',
+                                       margin:'0 0.3em 0.3em 0',
+                                       borderRadius:'2em',
+                                       boxSizing: 'border-box',
+                                       textDecoration:'none',
+                                       fontFamily:'Roboto',
+                                       fontWeight:'300',
+                                       color:'#FFFFFF',
+                                       backgroundColor:'#4eb5f1',
+                                       textAlign:'center',
+                                       transition: 'all 0.2s'
+                                    }} onClick={this.handleSubmit} value="false">No</button> 
+                                </div>
                            </div>);
 
-    var show = shouldShow ? feedbackComp : (<h3>Thank you for your response :)</h3>);
+    var show = shouldShow ? feedbackComp : (<h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Thank you for your response :)</h3>);
     return (
-      <div style={{marginLeft: '30%', marginTop: '20%'}}>
-          {show}
-      </div>
+          <div style={{height: '100%', /* Magic here */
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'}}>
+              {show}
+          </div>
     )
   }
 }

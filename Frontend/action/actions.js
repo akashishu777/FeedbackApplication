@@ -4,6 +4,6 @@ export const increaseAction = { type: 'increase' }
 export const decreaseAction = { type: 'decrease' }
 
 export const inputAction = text => ({
-  type: 'input', 
+  type: 'input',
   payload: text
 })
