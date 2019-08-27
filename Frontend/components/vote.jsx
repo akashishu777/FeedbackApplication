@@ -63,7 +63,7 @@ class Counter extends Component {
     const { value, onIncreaseClick, onDecreaseClick, text } = this.props;
     const { shouldShow } = this.state;
     const feedbackComp = ( <div style={{}}>
-                                 <h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Would you like to join us for dinner? We'll be going to Blabbity blabbity on 57th street at 7 p.m</h3>
+                                 <h3 style={{ fontSize:'30px', fontFamily: "sans-serif", color: "white", letterSpacing: '0px'}}>Would you like to join us for dinner? We'll be going to Barbeque Nation tomorrow at 7 p.m</h3>
                                   <p>{shouldShow}</p>
                                   <div style={{justifyContent: 'center',
                                             alignItems: 'center',
